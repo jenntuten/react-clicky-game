@@ -33,7 +33,6 @@ class App extends Component {
     console.log(userScore)
     if (clickedCards.includes(id)) {
       this.setState({ clickedCards: [], score: 0, message: "You've already chosen this show!" });
-      return;
     }
     if (userScore === 9) {
       this.setState({ clickedCards: [], score: 0, message: "You win!" })
@@ -43,11 +42,12 @@ class App extends Component {
       shuffle();
       this.setState({
         cards: cards,
-        score: userScore+1
+        score: userScore + 1
       })
     }
   };
-  
+  //This resets the game, but happens before the user can see the "You win" or "You've already chosen this show" message.
+  //Created a reset button to handle this.
   reset = () => {
     this.setState(
       {
