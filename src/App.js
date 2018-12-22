@@ -46,6 +46,17 @@ class App extends Component {
         score: userScore+1
       })
     }
+  };
+  
+  reset = () => {
+    this.setState(
+      {
+        cards,
+        score: 0,
+        clickedCards: [],
+        message: ""
+      }
+    )
   }
 
   // Map over this.state.cards and render a TVCard component for each friend object
@@ -54,6 +65,7 @@ class App extends Component {
       <Wrapper>
         <Title>React Clicky Game</Title>
         <Instructions />
+        <button onClick={this.reset}>Reset</button>
         <Score>Score: {this.state.score}</Score>
         <Status>{this.state.message}</Status>
         {this.state.cards.map(friend => (
