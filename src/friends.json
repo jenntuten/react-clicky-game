@@ -2,8 +2,8 @@
   {
   "id": 1,
   "name": "Leslie",
-  "clicks": 0
-  
+  "clicks": 0,
+  "image": "../public/images/leslie.jpg"
 },
 {
   "id": 2,
