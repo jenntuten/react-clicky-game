@@ -65,7 +65,7 @@ class App extends Component {
       <Wrapper>
         <Title>React Clicky Game</Title>
         <Instructions />
-        <button onClick={this.reset}>Reset</button>
+        <button onClick={this.reset}>Start Over</button>
         <Score>Score: {this.state.score}</Score>
         <Status>{this.state.message}</Status>
         {this.state.cards.map(friend => (
