@@ -1,24 +1,25 @@
 import React, { Component } from "react";
-import FriendCard from "./components/FriendCard";
+import TVCard from "./components/TVCard";
 import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
 import Score from "./components/Score";
 import Status from "./components/Status";
-import friends from "./friends.json";
+import Instructions from "./components/Instructions";
+import cards from "./cards.json";
 
 function shuffle() {
   //console.log('shuffling...')
   //Durstenfeld Shuffle Algorithm to rearrange cards
-  for (let i = friends.length - 1; i > 0; i--) {
+  for (let i = cards.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
-    [friends[i], friends[j]] = [friends[j], friends[i]];
+    [cards[i], cards[j]] = [cards[j], cards[i]];
   }
 }
 
 class App extends Component {
-  // Setting this.state.friends to the friends json array
+  // Setting this.state.cards to the cards json array
   state = {
-    friends,
+    cards,
     score: 0,
     clickedCards: [],
     message: ""
@@ -31,29 +32,32 @@ class App extends Component {
     let userScore = this.state.score
     console.log(userScore)
     if (clickedCards.includes(id)) {
-      console.log("You've already chosen this character!")
-      this.setState({ clickedCards: [], score: 0, message: "You've already chosen this character!" });
+      this.setState({ clickedCards: [], score: 0, message: "You've already chosen this show!" });
       return;
+    }
+    if (userScore === 9) {
+      this.setState({ clickedCards: [], score: 0, message: "You win!" })
     }
     else {
       clickedCards.push(id);
       shuffle();
       this.setState({
-        friends: friends,
+        cards: cards,
         score: userScore+1
       })
     }
   }
 
-  // Map over this.state.friends and render a FriendCard component for each friend object
+  // Map over this.state.cards and render a TVCard component for each friend object
   render() {
     return (
       <Wrapper>
         <Title>React Clicky Game</Title>
+        <Instructions />
         <Score>Score: {this.state.score}</Score>
         <Status>{this.state.message}</Status>
-        {this.state.friends.map(friend => (
-          <FriendCard
+        {this.state.cards.map(friend => (
+          <TVCard
             shuffling={this.shuffling}
             id={friend.id}
             name={friend.name}

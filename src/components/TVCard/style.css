@@ -1,10 +1,9 @@
 .card {
-  background:#6CADDC;
   border-radius: 2px;
-  height: 325px;
-  margin: 1rem;
+  height: 200px;
+  margin: 5px;
   position: relative;
-  width: 325px;
+  width: 250px;
   box-shadow: 0 3px 6px #999, 0 3px 6px #999;
   text-align: center
 }
@@ -13,7 +12,7 @@
   height: 60%;
   overflow: hidden;
   text-align: center;
-  background:#6CADDC;
+  margin-top: 20px;
 }
 
 .card > .img-container > img {
@@ -24,7 +23,6 @@
   padding-left: 1rem;
   padding-right: 1rem;
   font-size: 15px;
-  background:#6CADDC;
 }
 
 .card > .content > ul {
@@ -35,5 +33,3 @@
 .card > .content > ul > li {
   margin-top: 18px;
 }
-
-

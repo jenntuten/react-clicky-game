@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
 //<img alt={props.name} src={props.image} />
-function FriendCard(props) {
+function TVCard(props) {
   return (
     <div className="card" onClick={() => props.shuffling(props.id)}>
       <div className="img-container">
@@ -19,4 +19,4 @@ function FriendCard(props) {
   );
 }
 
-export default FriendCard;
+export default TVCard;

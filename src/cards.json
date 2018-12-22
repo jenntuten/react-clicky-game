@@ -1,0 +1,70 @@
+[
+  {
+  "id": 1,
+  "name": "Friends",
+  "clicks": 0,
+  "image": "https://images.wikia.nocookie.net/__cb20161102141338/friends/images/d/de/Wikia-Visualization-Main%2Cfriends.png"
+},
+{
+  "id": 2,
+  "name": "Parks and Recreation",
+  "clicks": 0,
+  "image": "https://images.wikia.nocookie.net/__cb20150331124130/parksandrecreation/images/4/48/Wikia-hero-image"
+},
+{
+  "id": 3,
+  "name": "South Park",
+  "clicks": 0,
+  "image": "https://vignette.wikia.nocookie.net/fb7b6be7-d27f-4d3e-9c30-0832729d716e/thumbnail-down/width/400/height/225"
+  
+},
+{
+  "id": 4,
+  "name": "Breaking Bad",
+  "clicks": 0,
+  "image": "https://upload.wikimedia.org/wikipedia/commons/4/48/Breaking_Bad_logo.png"
+  
+},
+{
+  "id": 5,
+  "name": "Sons of Anarchy",
+  "clicks": 0,
+  "image": "https://images.wikia.nocookie.net/__cb20161102144333/sonsofanarchy/images/2/21/Wikia-Visualization-Main%2Csonsofanarchy.png"
+  
+},
+{
+  "id": 6,
+  "name": "The Good Place",
+  "clicks": 0,
+  "image": "https://vignette.wikia.nocookie.net/c007cdbd-625a-499f-be4a-9c5fd1d2a6ba/thumbnail-down/width/400/height/225"
+  
+},
+{
+  "id": 7,
+  "name": "The Sopranos",
+  "clicks": 0,
+  "image": "https://images.wikia.nocookie.net/__cb20161102142032/sopranos/images/1/19/Wikia-Visualization-Main%2Csopranos.png"
+  
+},
+{
+  "id": 8,
+  "name": "Halt and Catch Fire",
+  "clicks": 0,
+  "image": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Halt-catch-fire-AMC.jpg"
+  
+},
+{
+  "id": 9,
+  "name": "Bob's Burgers",
+  "clicks": 0,
+  "image": "https://images.wikia.nocookie.net/__cb20161102151905/bobsburgerpedia/images/a/a1/Wikia-Visualization-Main%2Cbobsburgerpedia.png"
+  
+},
+{
+  "id": 10,
+  "name": "Death Note",
+  "clicks": 0,
+  "image": "https://vignette.wikia.nocookie.net/deathnote/images/4/40/Death01_51.jpg/revision/latest/scale-to-width-down/185?cb=20120517001126"
+  
+}
+]
