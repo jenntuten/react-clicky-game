@@ -26,16 +26,30 @@ class App extends Component {
   };
 
   shuffling = id => {
-    //console.log("clicked cards",this.state.clickedCards)
-    //console.log("score",this.state.score)
     let clickedCards = this.state.clickedCards;
     let userScore = this.state.score
     console.log(userScore)
     if (clickedCards.includes(id)) {
+      userScore = userScore-1
       this.setState({ clickedCards: [], score: 0, message: "You've already chosen this show!" });
+      setTimeout(
+        function() {
+            this.reset();
+        }
+        .bind(this),
+        2000
+    );
     }
     if (userScore === 9) {
-      this.setState({ clickedCards: [], score: 0, message: "You win!" })
+      userScore = userScore+1
+      this.setState({ clickedCards: [], score: 10, message: "You win!" })
+      setTimeout(
+        function() {
+            this.reset();
+        }
+        .bind(this),
+        2000
+    );
     }
     else {
       clickedCards.push(id);
@@ -46,9 +60,9 @@ class App extends Component {
       })
     }
   };
-  //This resets the game, but happens before the user can see the "You win" or "You've already chosen this show" message.
-  //Created a reset button to handle this.
+
   reset = () => {
+
     this.setState(
       {
         cards,
@@ -65,7 +79,7 @@ class App extends Component {
       <Wrapper>
         <Title>React Clicky Game</Title>
         <Instructions />
-        <button onClick={this.reset}>Start Over</button>
+
         <Score>Score: {this.state.score}</Score>
         <Status>{this.state.message}</Status>
         {this.state.cards.map(friend => (
